@@ -7,6 +7,7 @@ import FeaturedProducts from "@/components/shop/FeaturedProducts";
 import ContentSection from "@/components/content/ContentSection";
 import BeforeAfterShowcase from "@/components/home/BeforeAfterShowcase";
 import NewsletterSection from "@/components/home/NewsletterSection";
+import NationwideMap from "@/components/map/NationwideMap";
 import { Thread, Reply, User, ForumCategory, Activity, Product, ProductCategory, Article, Video, Resource } from "@/types";
 
 const Home = () => {
@@ -499,6 +500,12 @@ const Home = () => {
       />
       <ThreadPreview thread={featuredThread} replies={featuredReplies} />
       <FeaturedProducts products={products} categories={productCategories} />
+      
+      {/* Nationwide Community Map */}
+      <div className="container mx-auto px-4 py-8">
+        <NationwideMap />
+      </div>
+      
       <ContentSection 
         featuredArticle={featuredArticle} 
         articles={articles} 
