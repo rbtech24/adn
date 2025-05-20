@@ -16,15 +16,47 @@ try {
   console.error('❌ Error creating dist directory:', err);
 }
 
-// Create _redirects file directly
+// Create _redirects file directly - essential for SPA routing in Netlify
 try {
+  const redirectsContent = `# Netlify redirects for SPA routing
+/api/*  /.netlify/functions/:splat  200
+/*      /index.html                 200
+`;
+  
   fs.writeFileSync(
     path.join(__dirname, 'dist', '_redirects'),
-    '/* /index.html 200'
+    redirectsContent
   );
   console.log('✅ Created _redirects file in dist directory');
 } catch (err) {
   console.error('❌ Error creating _redirects file:', err);
+}
+
+// Create a netlify.toml file in the build output
+try {
+  const netlifyTomlContent = `# Netlify configuration
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+`;
+  
+  fs.writeFileSync(
+    path.join(__dirname, 'dist', 'netlify.toml'),
+    netlifyTomlContent
+  );
+  console.log('✅ Created netlify.toml file in dist directory');
+} catch (err) {
+  console.error('❌ Error creating netlify.toml file:', err);
 }
 
 // Create 404.html file directly
@@ -35,6 +67,7 @@ try {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found - Auto Detailing Nation</title>
+  <meta name="description" content="The page you're looking for doesn't exist or has been moved. Return to Auto Detailing Nation." />
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -86,6 +119,8 @@ try {
       font-weight: bold;
     }
   </style>
+  <!-- Important: Base URL for SPA navigation -->
+  <base href="/" />
 </head>
 <body>
   <div class="container">
