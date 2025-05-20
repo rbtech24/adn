@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import MetaTags from "@/components/seo/MetaTags";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturedSections from "@/components/home/FeaturedSections";
 import CommunitySection from "@/components/forum/CommunitySection";
