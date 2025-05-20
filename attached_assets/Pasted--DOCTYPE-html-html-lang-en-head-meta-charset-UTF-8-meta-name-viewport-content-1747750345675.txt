@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Budget Wax for Beginners - Auto Detailing Nation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="max-w-4xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Best Budget Wax for Beginners</h1>
+    <div class="border-l-4 border-red-500 pl-4 mb-6">
+      <p class="text-sm text-gray-400">Posted by <a href="/profile/johndetailer" class="text-red-400">JohnDetailer</a> on May 20, 2025</p>
+      <p class="mt-2">I’m new to detailing and looking for a wax under $20 that’s easy to apply. Any recommendations? I drive a black sedan, if that matters.</p>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <p class="text-sm text-gray-400">Reply by <a href="/profile/proshine" class="text-red-400">ProShine</a> on May 20, 2025</p>
+        <p class="mt-2">Try Meguiar’s Ultimate Liquid Wax. It’s $15 on <a href="/shop/meguiars-wax" class="text-red-400">our store</a>, super easy to apply, and great for dark cars. Buffs off cleanly with a microfiber towel.</p>
+        <button class="text-sm text-gray-400 mt-2">Like (12)</button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <p class="text-sm text-gray-400">Reply by <a href="/profile/carcrazy" class="text-red-400">CarCrazy</a> on May 21, 2025</p>
+        <p class="mt-2">I’d go with Turtle Wax ICE. It’s $12, beginner-friendly, and adds decent gloss. Check the <a href="/learn/blog/wax-guide" class="text-red-400">wax guide</a> for tips on applying it.</p>
+        <button class="text-sm text-gray-400 mt-2">Like (8)</button>
+      </div>
+    </div>
+    <form class="mt-6">
+      <textarea class="w-full bg-gray-800 p-2 rounded-lg" placeholder="Add your reply..."></textarea>
+      <button class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg">Post Reply</button>
+    </form>
+  </div>
+</body>
+</html>

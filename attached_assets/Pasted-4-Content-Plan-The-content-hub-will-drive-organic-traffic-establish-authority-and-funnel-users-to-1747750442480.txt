@@ -1,0 +1,86 @@
+4. Content Plan
+The content hub will drive organic traffic, establish authority, and funnel users to the forum and store. Below is a 6-month content plan with specific topics, formats, and distribution strategies.
+
+Content Goals:
+
+Rank for 50+ high-intent keywords (e.g., “best car wax,” “how to detail a car”) within 6 months.
+Generate 5,000 monthly blog visitors and 1,000 email subscribers.
+Drive 20% of blog readers to join the forum or visit the store.
+Content Types:
+
+Blog Posts: Evergreen guides, product reviews, and how-tos (800-1,500 words).
+Videos: 3-5 minute tutorials hosted on YouTube and embedded on the site.
+Resources: Downloadable PDFs (e.g., checklists, templates) for lead capture.
+User-Generated: Curated forum posts or user-submitted photos/videos.
+6-Month Content Schedule:
+
+
+Month	Content Piece	Format	Topic	Keyword Target	Distribution
+1	Blog	Guide	“Ultimate Guide to Car Detailing for Beginners”	“how to detail a car”	SEO, Reddit, Instagram
+1	Video	Tutorial	“5-Minute Clay Bar Tutorial”	“clay bar a car”	YouTube, TikTok, Forum
+1	Resource	PDF	“Beginner’s Detailing Checklist”	“detailing checklist”	Email sign-up, Blog
+2	Blog	Review	“Top 5 Ceramic Coatings of 2025”	“best ceramic coating”	SEO, Forum poll
+2	Video	Demo	“How to Use a Foam Cannon”	“foam cannon tutorial”	YouTube, Instagram Reels
+2	Forum	Thread	“What’s Your Go-To Wax?”	“best car wax”	Forum, Twitter
+3	Blog	Guide	“How to Start a Mobile Detailing Business”	“mobile detailing business”	SEO, LinkedIn
+3	Resource	Template	“Detailing Invoice Template”	“detailing invoice”	Email sign-up, Blog
+4	Blog	Listicle	“10 Common Detailing Mistakes to Avoid”	“detailing mistakes”	SEO, Reddit
+4	Video	Q&A	“Answering Your Top Detailing Questions”	“detailing tips”	YouTube, Forum
+5	Blog	Review	“Best Budget Polishers Under $100”	“budget car polisher”	SEO, Store link
+5	Forum	Contest	“Best Before-and-After Photo Challenge”	“detailing photos”	Forum, Instagram
+6	Blog	Guide	“How to Remove Swirl Marks Like a Pro”	“remove swirl marks”	SEO, Twitter
+6	Video	Showcase	“Pro Detailer’s Day in the Life”	“pro detailer tips”	YouTube, TikTok
+Content Creation Process:
+
+Research: Use Ahrefs or Semrush to identify low-competition, high-volume keywords (e.g., 500-2,000 monthly searches, difficulty <30).
+Production: Hire a freelance writer ($50-$100/post) and videographer ($200-$500/video) or use AI tools for drafts. In-house admin to edit and publish.
+SEO: Optimize with meta titles, descriptions, and schema markup (e.g., HowTo for guides). Aim for 2-3 internal links per post to forum or store.
+Distribution: Share on Reddit (r/AutoDetailing), Instagram (reels, stories), TikTok (short clips), and Twitter (threads). Email subscribers with weekly digests.
+Metrics to Track:
+
+Traffic: Blog views, bounce rate, time on page (Google Analytics).
+Engagement: Forum sign-ups, comments, shares (Mixpanel).
+Conversions: Store clicks, email sign-ups, sales attributed to content (Stripe, SendGrid).
+5. Sections and Pages
+The website will be organized into clear sections to ensure intuitive navigation and a seamless user experience. Below is a detailed breakdown of sections, pages, and their purpose.
+
+Main Sections:
+
+Home: Welcomes users and highlights key features.
+Community: Hub for forum, user profiles, and social features.
+Store: E-commerce platform for detailing products and merch.
+Learn: Content hub with blogs, videos, and resources.
+About: Brand story and contact information.
+Page Breakdown:
+
+
+Section	Page	Description	Key Features
+Home	Homepage	Entry point showcasing community, store, and content.	Hero banner with CTA (“Join the Nation”), featured forum threads, top products, latest blog posts.
+Community	Forum	Discussion boards for detailing topics.	Categories (e.g., “Polishes,” “Business”), threaded replies, search, tags, pinned threads.
+Community	User Profile	Personalized user dashboards.	Bio, photo gallery, badges, post history, followers, store discounts.
+Community	Clubs	Niche sub-communities (e.g., “Classic Cars”).	Private threads, member lists, custom banners.
+Store	Shop	Product listings and categories.	Filters (price, brand), sorting, community ratings, “Add to Cart.”
+Store	Product Page	Detailed product info.	Images, videos, specs, user reviews, related forum threads, “Buy Now.”
+Store	Cart	Shopping cart and checkout.	Item summary, promo codes, Stripe checkout, order confirmation.
+Store	Wishlist	Saved products for later.	Shareable lists, price alerts, “Move to Cart.”
+Learn	Blog	Articles and guides.	Search, categories (e.g., “Beginner,” “Pro”), related posts, embedded store links.
+Learn	Videos	Video tutorials and demos.	Custom player, playlists, CTAs to forum/store, comments.
+Learn	Resources	Downloadable guides and templates.	Gated content (email required), previews, ratings.
+About	About Us	Brand mission and story.	Team bios, mission statement, community stats (e.g., “10,000 detailers”).
+About	Contact	Support and inquiries.	Contact form, FAQ, live chat (via Intercom), social links.
+About	Press	Media kit and coverage.	Press releases, logos, contact for journalists.
+Navigation:
+
+Top Bar: Logo, Search, Login/Signup, Cart, Profile.
+Main Menu: Home, Community, Shop, Learn, About.
+Footer: Links to Contact, FAQ, Terms, Privacy, Social Media, Newsletter Sign-up.
+Dynamic Features:
+
+Personalization: Show recommended forum threads or products based on user activity (e.g., viewed “Ceramic Coatings” blog).
+Notifications: Real-time alerts for new replies, store deals, or community events.
+Progressive Web App (PWA): Enable offline access and app-like experience on mobile.
+Design Aesthetic:
+
+Colors: Black, chrome silver, and red accents to evoke car culture.
+Typography: Sans-serif fonts (e.g., Montserrat, Roboto) for readability.
+Visuals: High-res car photos, glossy finishes, and clean layouts to reflect detailing’s premium feel.
