@@ -1,16 +1,14 @@
-# netlify.toml
-# This file tells Netlify how to build and deploy your site
-
 [build]
-  command = "npm run build"
+  command = "npm run build && node netlify.js"
   publish = "dist"
-  functions = "netlify/functions"
 
-# This redirect rule is the key fix for SPA routing in Netlify
+# The following redirect is intended for use with most SPAs that handle routing internally.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-[build.environment]
-  NODE_VERSION = "18"
+[dev]
+  command = "npm run dev" # Command to start your dev server
+  port = 3000 # Port that the dev server will be accessible on
+  publish = "dist" # If you use a _redirect file, provide the path to your static content folder
