@@ -205,10 +205,42 @@ Just remember that preparation is key, and maintenance is still required even wi
 
   return (
     <>
-      <Helmet>
-        <title>{`${article.title} - Auto Detailing Nation`}</title>
-        <meta name="description" content={article.summary} />
-      </Helmet>
+      <MetaTags
+        title={`${article.title} - Auto Detailing Nation`}
+        description={article.summary}
+        keywords={article.tags ? article.tags.join(", ") : "auto detailing, car care"}
+        canonicalUrl={`https://autodetailingnation.com/learn/${article.slug}`}
+        ogType="article"
+        ogImage={article.image}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": article.title,
+          "description": article.summary,
+          "image": article.image,
+          "datePublished": article.publishedAt.toISOString(),
+          "dateModified": article.publishedAt.toISOString(),
+          "author": {
+            "@type": "Person",
+            "name": "John Doe",
+            "url": "https://autodetailingnation.com/profile/john-doe"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Auto Detailing Nation",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://autodetailingnation.com/logo.png"
+            }
+          },
+          "articleSection": "Auto Detailing Guides",
+          "keywords": article.tags ? article.tags.join(", ") : "",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://autodetailingnation.com/learn/${article.slug}`
+          }
+        }}
+      />
 
       <div className="bg-[#121212] py-12 min-h-screen">
         <div className="container mx-auto px-4">
