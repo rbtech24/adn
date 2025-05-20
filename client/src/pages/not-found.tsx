@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { AlertCircle, Home, ChevronLeft } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
@@ -29,17 +28,17 @@ export default function NotFound() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/">
-              <Button className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                 <Home className="mr-2 h-5 w-5" />
                 Return to Homepage
-              </Button>
+              </a>
             </Link>
             
             <Link href="/shop">
-              <Button className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              <a className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                 <ChevronLeft className="mr-2 h-5 w-5" />
                 Browse Products
-              </Button>
+              </a>
             </Link>
           </div>
         </div>
