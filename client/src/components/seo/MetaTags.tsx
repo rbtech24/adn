@@ -1,6 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+// Add a declaration for any nested structured data objects
+interface StructuredDataObject {
+  [key: string]: any;
+}
+
 interface MetaTagsProps {
   title: string;
   description: string;
@@ -10,7 +15,7 @@ interface MetaTagsProps {
   ogUrl?: string;
   twitterCard?: 'summary' | 'summary_large_image';
   twitterHandle?: string;
-  structuredData?: object;
+  structuredData?: StructuredDataObject;
   keywords?: string;
 }
 

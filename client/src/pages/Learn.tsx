@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import MetaTags from "@/components/seo/MetaTags";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -79,10 +79,31 @@ const Learn = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Learn - Auto Detailing Nation</title>
-        <meta name="description" content="Discover expert guides, tutorials, and resources to master the art and science of auto detailing" />
-      </Helmet>
+      <MetaTags
+        title="Learn - Auto Detailing Nation"
+        description="Discover expert guides, tutorials, and resources to master the art and science of auto detailing"
+        keywords="auto detailing guides, car care tutorials, detailing tips, ceramic coating guides, paint correction, interior detailing"
+        canonicalUrl="https://autodetailingnation.com/learn"
+        ogType="website"
+        ogImage="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=630&q=80"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Auto Detailing Knowledge Hub",
+          "description": "Comprehensive guides, tutorials, and resources for auto detailing enthusiasts and professionals",
+          "url": "https://autodetailingnation.com/learn",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": articles.map((article, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "url": `https://autodetailingnation.com/learn/${article.slug}`,
+              "name": article.title,
+              "description": article.excerpt
+            }))
+          }
+        }}
+      />
 
       <div className="bg-[#121212] min-h-screen py-12">
         <div className="container mx-auto px-4">

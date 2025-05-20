@@ -457,15 +457,37 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Auto Detailing Nation - The Premier Community for Detailing Enthusiasts</title>
-        <meta name="description" content="Join the premier online community for auto detailing enthusiasts and professionals. Learn, shop, and connect with thousands of car care experts." />
-        <meta property="og:title" content="Auto Detailing Nation - The Premier Community for Detailing Enthusiasts" />
-        <meta property="og:description" content="Join the premier online community for auto detailing enthusiasts and professionals. Learn, shop, and connect with thousands of car care experts." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://autodetailingnation.com" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=630" />
-      </Helmet>
+      <MetaTags 
+        title="Auto Detailing Nation - The Premier Community for Detailing Enthusiasts"
+        description="Join the premier online community for auto detailing enthusiasts and professionals. Learn, shop, and connect with thousands of car care experts."
+        keywords="auto detailing, car care, ceramic coating, wax, polish, paint correction, interior detailing, wheel care, mobile detailing"
+        ogType="website"
+        ogUrl="https://autodetailingnation.com"
+        ogImage="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=630"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Auto Detailing Nation",
+          "url": "https://autodetailingnation.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://autodetailingnation.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "organization": {
+            "@type": "Organization",
+            "name": "Auto Detailing Nation",
+            "url": "https://autodetailingnation.com",
+            "logo": "https://autodetailingnation.com/logo.png",
+            "sameAs": [
+              "https://facebook.com/autodetailingnation",
+              "https://twitter.com/autodetailnation",
+              "https://instagram.com/autodetailingnation",
+              "https://youtube.com/autodetailingnation"
+            ]
+          }
+        }}
+      />
 
       <HeroSection />
       <FeaturedSections />
