@@ -1,6 +1,11 @@
 // This script ensures the _redirects file is copied to the build directory
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get current directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Define paths
 const publicDir = path.join(__dirname, 'public');
