@@ -49,7 +49,7 @@ const ContentSection = ({ featuredArticle, articles, videos, resources }: Conten
                       className="w-8 h-8 rounded-full object-cover" 
                     />
                     <div className="ml-2">
-                      <p className="text-white text-sm">By <Link href={`/profile/${featuredArticle.author.username}`} className="text-[#E53E3E]">{featuredArticle.author.username}</Link></p>
+                      <p className="text-white text-sm">By <span className="text-[#E53E3E]">{featuredArticle.author.username}</span></p>
                       <p className="text-gray-400 text-xs">{featuredArticle.date} • {featuredArticle.readTime}</p>
                     </div>
                   </div>

@@ -15,6 +15,7 @@ import ArticleView from "@/pages/ArticleView";
 import Profile from "@/pages/Profile";
 import Cart from "@/pages/Cart";
 import Auth from "@/pages/Auth";
+import About from "@/pages/About";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -34,6 +35,7 @@ function Router() {
           <Route path="/profile/:username" component={Profile} />
           <Route path="/cart" component={Cart} />
           <Route path="/auth" component={Auth} />
+          <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>
       </main>
