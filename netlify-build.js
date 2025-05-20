@@ -1,31 +1,53 @@
-// Netlify build script
-// This script copies necessary files to the build output directory
-
+// Netlify build script for Single Page Applications (SPA)
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Create the dist directory if it doesn't exist
-const distDir = path.resolve('./dist');
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Define paths
+const distDir = path.join(__dirname, 'dist');
+const publicDir = path.join(__dirname, 'public');
+
+console.log('Starting Netlify build process...');
+
+// Create the redirects file
+try {
+  // Make sure dist directory exists
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+    console.log('Created dist directory');
+  }
+
+  // Write the redirects file directly to dist folder
+  const redirectsContent = `# Netlify SPA routing configuration
+# Handle routes for the React SPA
+/*    /index.html   200
+`;
+
+  fs.writeFileSync(path.join(distDir, '_redirects'), redirectsContent);
+  console.log('Created _redirects file with SPA routing rules');
+
+  // Copy any files from public directory to dist
+  if (fs.existsSync(publicDir)) {
+    const files = fs.readdirSync(publicDir);
+    for (const file of files) {
+      // Skip the redirects file as we've already created it
+      if (file === '_redirects') continue;
+      
+      const srcPath = path.join(publicDir, file);
+      const destPath = path.join(distDir, file);
+      
+      if (fs.statSync(srcPath).isFile()) {
+        fs.copyFileSync(srcPath, destPath);
+        console.log(`Copied ${file} to dist directory`);
+      }
+    }
+  }
+
+  console.log('Netlify build process completed successfully');
+} catch (error) {
+  console.error('Error during Netlify build process:', error);
+  process.exit(1);
 }
-
-// Copy the _redirects file to the dist directory
-fs.copyFile('./public/_redirects', './dist/_redirects', (err) => {
-  if (err) {
-    console.error('Error copying _redirects file:', err);
-  } else {
-    console.log('_redirects file copied to dist directory');
-  }
-});
-
-// Copy the 404.html file to the dist directory
-fs.copyFile('./public/404.html', './dist/404.html', (err) => {
-  if (err) {
-    console.error('Error copying 404.html file:', err);
-  } else {
-    console.log('404.html file copied to dist directory');
-  }
-});
-
-console.log('Netlify build script completed');

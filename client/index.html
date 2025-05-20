@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Auto Detailing Nation - The Premier Community for Detailing Enthusiasts</title>
     <meta name="description" content="Auto Detailing Nation is the premier online hub for auto detailing enthusiasts and professionals. Join our community, shop for products, and learn from experts." />
-    <!-- Base URL for proper SPA routing on Netlify -->
+    <!-- Base URL for proper SPA routing -->
     <base href="/" />
+    <!-- Netlify SPA redirect script -->
+    <script type="text/javascript">
+      // Check if there's a redirect in sessionStorage (set by 404.html)
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          // Clear the sessionStorage
+          sessionStorage.removeItem('redirect');
+          
+          // Only redirect if on the root path to avoid redirect loops
+          if (window.location.pathname === '/') {
+            // Use history API if available, fallback to window.location
+            const cleanRedirect = redirect.startsWith('/') ? redirect.substring(1) : redirect;
+            if (window.history && window.history.replaceState) {
+              // Use history API to update the URL
+              const newUrl = window.location.origin + '/' + cleanRedirect;
+              window.history.replaceState(null, null, newUrl);
+            }
+          }
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

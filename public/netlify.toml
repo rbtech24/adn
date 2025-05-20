@@ -1,0 +1,12 @@
+# netlify.toml
+# This file tells Netlify how to build and deploy your site
+
+[build]
+  # Directory to publish (the build output)
+  publish = "dist"
+
+[[redirects]]
+  # Redirect any path to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
